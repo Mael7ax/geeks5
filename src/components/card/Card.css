@@ -1,0 +1,11 @@
+.card{
+    padding: 20px;
+    background: white;
+    color: #000;
+}
+.card-list{
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
