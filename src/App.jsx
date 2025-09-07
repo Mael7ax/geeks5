@@ -1,11 +1,11 @@
 import './App.css'
-import { UserList }from './components/card/UserList.jsx'
+import {ShopProducts} from "./components/Shop/ShopProducts.jsx";
 
 function App() {
 
   return (
     <>
-      <UserList/>
+      <ShopProducts/>
     </>
   )
 }
