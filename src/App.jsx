@@ -1,17 +1,24 @@
 import './App.css'
-import {Weather} from "./components/weather/Weather.jsx";
-import {Counter} from "./components/Counter/Counter.jsx";
-import {FilteredList} from "./components/FilterUsers/FilteredList.jsx";
-import {RegistrationForm} from "./components/regForm/RegistrationForm.jsx";
-import {Quiz} from "./components/quiz/Quiz.jsx";
+import {Routes,Route} from "react-router-dom";
+import {MainLayout} from "./Layout/MainLayout.jsx";
+import Home from "./pages/Home.jsx";
+import About from "./pages/About.jsx";
+import Posts from "./pages/Posts.jsx";
+import PostDetail from "./pages/PostDetail.jsx";
+import NotFound from "./pages/NotFound.jsx";
 
 function App() {
 
   return (
-    <>
-        <RegistrationForm/>
-        <Quiz/>
-    </>
+    <Routes>
+        <Route path="/" element={<MainLayout />}>
+            <Route index element={<Home/>} />
+            <Route path="about" element={<About />} />
+            <Route path="posts" element={<Posts />} />
+            <Route path="posts/:id" element={<PostDetail />} />
+            <Route path="*" element={<NotFound />} />
+        </Route>
+    </Routes>
   )
 }
 
